@@ -6,14 +6,16 @@ canvas.height = innerHeight
 
 document.getElementById('score').style.display = 'none'
 
+var audio = document.getElementById('player')
 function playMusic() {
-    document.getElementById('player').play()
+    audio.play()
+    audio.loop = true
     document.getElementById('muted').style.display = 'none'
     document.getElementById('unmuted').style.display = 'block'
 }
 function pauseMusic() {
-    document.getElementById('player').pause()
-    document.getElementById('player').currentTime = '0'
+    audio.pause()
+    audio.currentTime = '0'
     document.getElementById('muted').style.display = 'block'
     document.getElementById('unmuted').style.display = 'none'
 }
@@ -182,8 +184,8 @@ class Particle {
 
 
 // Create entities
-const x = canvas.width / 2
-const y = canvas.height / 2
+let x = canvas.width / 2
+let y = canvas.height / 2
 
 let player = new Player(x, y, 20, 'white')
 let bullets = []
@@ -193,6 +195,8 @@ let particles = []
 function init() {
     canvas.width = innerWidth
     canvas.height = innerHeight
+    x = canvas.width / 2
+    y = canvas.height / 2
     time = 0
     score = 0
     chance = 900
@@ -203,10 +207,10 @@ function init() {
     particles = []
 }
 
-
+let zumbInterval
 // Spawn zumbs
 function spawnZumb() {
-    setInterval(() => {
+    zumbInterval = setInterval(() => {
         const chanceNum = Math.floor(Math.random() * chance)
         if (chanceNum == 1) {
             const radius = Math.random() * 25 + 15
@@ -241,6 +245,7 @@ function spawnZumb() {
             zumbs.push(new Zumb(x, y, radius, color, velocity))
 
             start += 1
+            console.log(chance + ' ' + chanceNum)
         }
     }, 5)
 }
@@ -364,6 +369,8 @@ function endGame() {
     document.getElementById('container').style.display = 'flex'
     saveGame()
     document.getElementById('score').style.display = 'none'
+
+    clearInterval(zumbInterval)
 }
 
 function loadGame() {
