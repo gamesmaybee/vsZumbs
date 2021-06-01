@@ -4,6 +4,8 @@ const context = canvas.getContext('2d')
 canvas.width = innerWidth
 canvas.height = innerHeight
 
+document.getElementById('score').style.display = 'none'
+
 // Spawn chance
 let chance = 900
 let score = 0
