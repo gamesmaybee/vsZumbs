@@ -6,6 +6,18 @@ canvas.height = innerHeight
 
 document.getElementById('score').style.display = 'none'
 
+function playMusic() {
+    document.getElementById('player').play()
+    document.getElementById('muted').style.display = 'none'
+    document.getElementById('unmuted').style.display = 'block'
+}
+function pauseMusic() {
+    document.getElementById('player').pause()
+    document.getElementById('player').currentTime = '0'
+    document.getElementById('muted').style.display = 'block'
+    document.getElementById('unmuted').style.display = 'none'
+}
+
 // Spawn chance
 let chance = 900
 let score = 0

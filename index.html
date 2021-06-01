@@ -12,8 +12,6 @@
 <body>
     <canvas></canvas>
 
-    <div id="score"><span>Score: <span id="scoreSpan">0</span></span></div>
-
     <div id="container">
         <div class="start-game">
             <div class="scores">
@@ -41,9 +39,21 @@
         </div>
     </div>
 
+    <audio id="player" loop>
+        <source src="src/audio/theme.wav" type="audio/wav">
+    </audio>
+
+    <div id="in-game">
+        <div id="score"><span>Score: <span id="scoreSpan">0</span></span></div>
+        <button id="muted" onclick="playMusic()">Sound: Off</button>
+        <button id="unmuted" onclick="pauseMusic()">Sound: On</button>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
         integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="src/index.js"></script>
+
+    
 </body>
 </html>
