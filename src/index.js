@@ -6,7 +6,7 @@ canvas.height = innerHeight
 
 document.getElementById('score').style.display = 'none'
 
-var audio = document.getElementById('player')
+var audio = document.getElementById('audio')
 function playMusic() {
     audio.play()
     audio.loop = true
