@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    background: black;
+}
+
+canvas {
+    display: block;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    user-select: none;
+}
+
+#container, #container2 {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.start-game {
+    background-color: white;
+    padding: 40px 70px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+}
+.scores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.current-score, .high-score {
+    margin: 0 20px;
+    text-align: center;
+}
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 50px;
+    font-weight: 900;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+button {
+    width: 100%;
+    background-color: rgb(39, 78, 111);
+    font-size: 16px;
+    font-family: 'Montserrat';
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
+button:hover, button:focus {
+    outline-style: none;
+    background-color: rgb(143, 190, 228);
+    color: black;
+}
+
+embed {
+    position: absolute;
+}

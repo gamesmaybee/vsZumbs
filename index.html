@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Against Zumbs</title>
+    <link rel="stylesheet" href="src/core.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas></canvas>
+
+    <div id="score"><span>Score: <span id="scoreSpan">0</span></span></div>
+
+    <div id="container">
+        <div class="start-game">
+            <div class="scores">
+                <div class="current-score">
+                    <h1 id="overScore">0</h1>
+                    <p>Current score</p>
+                </div>
+                <div class="high-score">
+                    <h1 id="highScore">0</h1>
+                    <p>High score</p>
+                </div>
+            </div>
+            <button onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+    <div id="container2">
+        <div class="start-game">
+            <div class="scores">
+                <div class="high-score">
+                    <h1 id="highScoreTwo">0</h1>
+                    <p>High score</p>
+                </div>
+            </div>
+            <button onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+        integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="src/index.js"></script>
+</body>
+</html>
