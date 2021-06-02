@@ -31,7 +31,6 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
 }
 .start-game {
     background-color: white;
